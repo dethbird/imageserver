@@ -41,7 +41,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
 
     $width = isset ($queryParams['w']) ? $queryParams['w'] : 1920;
     $hash = md5($request->getUri()->getQuery());
-    $extension = pathinfo($queryParams['img'], PATHINFO_EXTENSION);
+    $extension = 'jpg';
     $filename = $hash . '.' . $extension;
     $imageData = null;
 
@@ -59,7 +59,7 @@ $app->get('/', function (Request $request, Response $response, $args) {
         $im = imagecreatefromstring($imageData);
         $resized = imagescale($im, $width);
 
-        imagejpeg($resized, CACHE_DIR . $filename);
+        imagejpeg($resized, CACHE_DIR . $filename, 90);
         $imageData = file_get_contents(CACHE_DIR . $filename);
 
     }
