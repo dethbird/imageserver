@@ -2,3 +2,4 @@
 /public/error_log
 /vendor/
 .env
+public/cache/*
