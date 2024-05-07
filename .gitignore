@@ -1,0 +1,4 @@
+.vscode
+/public/error_log
+/vendor/
+.env

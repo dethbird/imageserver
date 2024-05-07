@@ -1,0 +1,17 @@
+{
+    "name": "dethbird/imageserver",
+    "description": "Image server",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Rishi Satsangi",
+            "email": "rishi.satsangi@gmail.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^4.9",
+        "slim/psr7": "^1.5",
+        "symfony/yaml": "^5.4"
+    }
+}
